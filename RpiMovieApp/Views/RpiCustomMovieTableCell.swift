@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-class CustomMovieTableCell: UITableViewCell {
+class RpiCustomMovieTableCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -19,11 +19,29 @@ class CustomMovieTableCell: UITableViewCell {
     }
     
     let imgMoviePoster : UIImageView = {
-        let imgMoviePoster = UIImageView()
-        imgMoviePoster.translatesAutoresizingMaskIntoConstraints = false
-        imgMoviePoster.backgroundColor = .black
-        imgMoviePoster.contentMode = .scaleAspectFit
-        return imgMoviePoster
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.backgroundColor = .black
+        image.contentMode = .scaleAspectFit
+        return image
+    }()
+    
+    let lblMovieTitle : UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 12, weight: .bold)
+        label.textColor = .black
+        return label
+    }()
+    
+    let lblMovieOverview : UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 12, weight: .light)
+        label.numberOfLines = 5
+        label.textColor = .darkGray
+        label.textAlignment = .justified
+        return label
     }()
     
     func setupLayout(){
@@ -33,7 +51,15 @@ class CustomMovieTableCell: UITableViewCell {
         imgMoviePoster.widthAnchor.constraint(equalToConstant: 120).isActive = true
         imgMoviePoster.heightAnchor.constraint(equalToConstant: 120).isActive = true
         
+        addSubview(lblMovieTitle)
+        lblMovieTitle.topAnchor.constraint(equalTo: self.topAnchor, constant: 10).isActive = true
+        lblMovieTitle.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 130).isActive = true
+        lblMovieTitle.widthAnchor.constraint(equalToConstant: frame.width - 50).isActive = true
         
+        addSubview(lblMovieOverview)
+        lblMovieOverview.topAnchor.constraint(equalTo: self.topAnchor, constant: 30).isActive = true
+        lblMovieOverview.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 130).isActive = true
+        lblMovieOverview.widthAnchor.constraint(equalToConstant: frame.width - 50).isActive = true
         
     }
     
