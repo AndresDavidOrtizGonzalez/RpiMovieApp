@@ -1,6 +1,6 @@
 //
 //  RPIMovie.swift
-//  movieTest
+//  RpiMovieApp
 //
 //  Created by Andres Ortiz on 5/10/18.
 //  Copyright © 2018 Andres. All rights reserved.
