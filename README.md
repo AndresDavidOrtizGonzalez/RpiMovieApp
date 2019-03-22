@@ -66,4 +66,4 @@ Qué características tiene, según su opinión, un “buen” código o código
     
     
 
-![alt text](https://flic.kr/p/2fhtToX)
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/162890832@N07/47444192151/in/dateposted-public/" title="Online Popular"><img src="https://farm8.staticflickr.com/7867/47444192151_d0c8f576d3_b.jpg" width="529" height="975" alt="Online Popular"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
