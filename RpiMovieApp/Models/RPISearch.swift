@@ -14,4 +14,5 @@ struct Search: Decodable {
     var results : [Movie]
     var totalResults: Int64
     var page: Int64
+    var dates: DateRange?
 }
