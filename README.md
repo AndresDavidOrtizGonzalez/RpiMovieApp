@@ -66,4 +66,12 @@ Qué características tiene, según su opinión, un “buen” código o código
     
     
 
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/162890832@N07/47444192151/in/dateposted-public/" title="Online Popular"><img src="https://farm8.staticflickr.com/7867/47444192151_d0c8f576d3_b.jpg" width="529" height="975" alt="Online Popular"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/162890832@N07/47444192151/in/dateposted-public/" title="Online Popular"><img src="https://farm8.staticflickr.com/7867/47444192151_d0c8f576d3_b.jpg" width="529" height="975" alt="Online Popular"></a>
+
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/162890832@N07/47444191851/in/dateposted-public/" title="Online Browse"><img src="https://farm8.staticflickr.com/7920/47444191851_5a17f4d672_b.jpg" width="490" height="961" alt="Online Browse"></a>
+
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/162890832@N07/47444191901/in/dateposted-public/" title="Online Upcoming"><img src="https://farm8.staticflickr.com/7880/47444191901_2b72f94791_b.jpg" width="518" height="978" alt="Online Upcoming"></a>
+
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/162890832@N07/47444192021/in/dateposted-public/" title="Online TopRated"><img src="https://farm8.staticflickr.com/7909/47444192021_2769170570_b.jpg" width="501" height="975" alt="Online TopRated"></a>
+
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/162890832@N07/47444192151/in/dateposted-public/" title="Online Popular"><img src="https://farm8.staticflickr.com/7867/47444192151_d0c8f576d3_b.jpg" width="529" height="975" alt="Online Popular"></a>
