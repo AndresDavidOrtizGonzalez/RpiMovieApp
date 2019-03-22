@@ -8,7 +8,7 @@
 
 import XCTest
 @testable import RpiMovieApp
-
+import OHHTTPStubs
 
 
 class TestRPIMovisStorage: XCTestCase {
@@ -29,30 +29,24 @@ class TestRPIMovisStorage: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
+         let successExpectation = self.expectation(description: "success called")
         
+        stub(condition: isHost("api.themoviedb.org")) { _ in
+            // Stub it with our "wsresponse.json" stub file (which is in same bundle as self)
+            let stubPath = OHPathForFile("wsresponse.json", type(of: self))
+            return fixture(filePath: stubPath!, headers: ["Content-Type":"application/json"])
+        }
         
-        var movieId : Int64
-        movieId = 1
-        /*loader?.fetchMovies(kind: 1, page: 1, text: ""){
+
+        
+        loader?.fetchMovies(kind: 1, page: 1, text: ""){
             (result: [Movie], success) in
+            successExpectation.fulfill()
             XCTAssertEqual(20, result.count)
         }
         
-        loader?.fetchMovies(kind: 1, page: 2, text: ""){
-            (result: [Movie], success) in
-            XCTAssertEqual(40, result.count)
-        }
         
-        loader?.fetchMovies(kind: 1, page: 1, text: "Captain"){
-            (result: [Movie], success) in
-            movieId = (result.first?.id)!
-            XCTAssertNotNil(result)
-        }*/
-        
-        loader?.fetchMovieVideo(movieId: movieId){
-            (result: String, success) in
-             XCTAssertNotNil(result)
-        }
+        waitForExpectations(timeout: 10, handler: nil)
         
     }
 

@@ -148,10 +148,14 @@ class RPIMovieDetailedViewController: UIViewController, UITableViewDataSource, U
             imgCover = UIImageView()
             imgCover.frame = CGRect(x:20, y: 10, width: (UIScreen.main.bounds.width/3), height: (UIScreen.main.bounds.height/3)-20)
             imgCover.contentMode = .scaleAspectFit
-            let baseURL = "https://image.tmdb.org/t/p/w500"
-            //let url = URL(string: baseURL + movie!.posterPath)
-            let placeholderImage = UIImage(named: "movieplaceholder")!
-            imgCover.sd_setImage(with: URL(string: baseURL + movie!.posterPath!), placeholderImage:  placeholderImage)
+            if ((movie!.posterPath) != nil){
+                let baseURL = "https://image.tmdb.org/t/p/w500"
+                let placeholderImage = UIImage(named: "movieplaceholder")!
+                imgCover.sd_setImage(with: URL(string: baseURL + movie!.posterPath!), placeholderImage:  placeholderImage)
+            }
+            else{
+               imgCover.image = UIImage.init(named: "movieplaceholder")
+            }
             cell.addSubview(imgCover)
             
             let lblPlot = UILabel()

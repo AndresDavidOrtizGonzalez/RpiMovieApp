@@ -20,6 +20,14 @@ class RPIHome: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var animationStyle : UITableView.RowAnimation?
     let tableView: UITableView = UITableView()
     
+    
+    lazy var loader: UIActivityIndicatorView = {
+        let loader = UIActivityIndicatorView(style: .whiteLarge)
+        loader.color = .black
+        loader.translatesAutoresizingMaskIntoConstraints = false
+        return loader
+    }()
+    
     let svCategory : UISegmentedControl = {
         let items = ["Popular", "Top Rated", "Upcoming"]
         let customSC = UISegmentedControl(items: items)
@@ -134,6 +142,20 @@ class RPIHome: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         tableView.register(RpiCustomMovieTableCell.self, forCellReuseIdentifier: cellId)
         
+        
+        self.view.addSubview(loader)
+        
+        
+        
+        
+        loader.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        loader.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        loader.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        loader.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        
+        loader.isHidden = true
+        
     }
     
     func setupActions(){
@@ -142,7 +164,8 @@ class RPIHome: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func fetchData(text: String){
-        
+        self.loader.isHidden = false
+        self.loader.startAnimating()
         RPIMovieLoader.shared.fetchMovies(kind: category!, page: page!, text: text){
             (result: [Movie], success) in
             if (success){
@@ -181,6 +204,8 @@ class RPIHome: UIViewController, UITableViewDataSource, UITableViewDelegate {
                     self.tableView.reloadData()
                 }
             }
+            self.loader.stopAnimating()
+            self.loader.isHidden = true
             self.isLoading = false
             self.isSearching = false
         }
@@ -254,13 +279,17 @@ class RPIHome: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let movie = movies[indexPath.row]
         
         let baseURL = "https://image.tmdb.org/t/p/w500"
-        let url = URL(string: baseURL + movie.posterPath!)
-        let placeholderImage = UIImage(named: "movieplaceholder")!
-        
-        cell.imgMoviePoster.sd_imageTransition = .fade
-        cell.imgMoviePoster.sd_internalSetImage(with: url, placeholderImage: placeholderImage, operationKey: nil, setImageBlock: nil, progress: nil)
-        
-        //cell.imgMoviePoster.image = UIImage.init(named: "movieplaceholder")
+        if  ((movie.posterPath) != nil){
+            let url = URL(string: baseURL + movie.posterPath!)
+            let placeholderImage = UIImage(named: "movieplaceholder")!
+            
+            cell.imgMoviePoster.sd_imageTransition = .fade
+            cell.imgMoviePoster.sd_internalSetImage(with: url, placeholderImage: placeholderImage, operationKey: nil, setImageBlock: nil, progress: nil)
+        }
+        else{
+            cell.imgMoviePoster.image = UIImage.init(named: "movieplaceholder")
+        }
+
         cell.lblMovieTitle.text = movie.title
         cell.lblMovieOverview.text = movie.overview
         return cell

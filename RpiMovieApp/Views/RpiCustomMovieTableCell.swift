@@ -48,17 +48,17 @@ class RpiCustomMovieTableCell: UITableViewCell {
         addSubview(imgMoviePoster)
         imgMoviePoster.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
         imgMoviePoster.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 0).isActive = true
-        imgMoviePoster.widthAnchor.constraint(equalToConstant: 120).isActive = true
+        imgMoviePoster.widthAnchor.constraint(equalToConstant: 80).isActive = true
         imgMoviePoster.heightAnchor.constraint(equalToConstant: 120).isActive = true
         
         addSubview(lblMovieTitle)
         lblMovieTitle.topAnchor.constraint(equalTo: self.topAnchor, constant: 10).isActive = true
-        lblMovieTitle.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 130).isActive = true
+        lblMovieTitle.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 90).isActive = true
         lblMovieTitle.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10).isActive = true
         
         addSubview(lblMovieOverview)
         lblMovieOverview.topAnchor.constraint(equalTo: self.topAnchor, constant: 30).isActive = true
-        lblMovieOverview.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 130).isActive = true
+        lblMovieOverview.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 90).isActive = true
         lblMovieOverview.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10).isActive = true
         
         

@@ -15,7 +15,7 @@ target 'RpiMovieApp' do
 
   target 'RpiMovieAppTests' do
     inherit! :search_paths
-    # Pods for testing
+    pod 'OHHTTPStubs/Swift'
   end
 
 end
