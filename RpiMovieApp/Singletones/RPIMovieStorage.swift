@@ -66,13 +66,13 @@ class RPIMovieStorage {
                     return nil
                 }
                 return try? jsonDecoder.decode(Movie.self, from: data)
-                }.sorted(by: { $0.popularity > $1.popularity })
+                }.sorted(by: { ($0.voteAverage ?? 0) > ($1.voteAverage ?? 0) })
         }
         else{
             try? fileManager.createDirectory(at: documentsURL.appendingPathComponent("topRated"), withIntermediateDirectories: false, attributes: nil)
         }
         
-        if directoryExistsAtPath(documentsURL.appendingPathComponent("upcomingMovies").path){
+        if directoryExistsAtPath(documentsURL.appendingPathComponent("upcoming").path){
             moviesFilesURLs = try! fileManager.contentsOfDirectory(at: documentsURL.appendingPathComponent("upcoming"), includingPropertiesForKeys: nil)
             upcomingMovies = moviesFilesURLs.compactMap { url -> Movie? in
                 guard !url.absoluteString.contains(".DS_Store") else {
@@ -82,7 +82,7 @@ class RPIMovieStorage {
                     return nil
                 }
                 return try? jsonDecoder.decode(Movie.self, from: data)
-                }.sorted(by: { $0.popularity > $1.popularity })
+                }.sorted(by: { ($0.releaseDate ?? "") > ($1.releaseDate ?? "") })
         }
         else{
             try? fileManager.createDirectory(at: documentsURL.appendingPathComponent("upcoming"), withIntermediateDirectories: false, attributes: nil)

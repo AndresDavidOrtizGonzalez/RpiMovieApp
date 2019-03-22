@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RpiMovieApp/Singletones/RPIMovieLoader.swift"
-            timestampString = "574980488.58776"
+            timestampString = "574981252.21995"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "60"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RpiMovieApp/Singletones/RPIMovieLoader.swift"
-            timestampString = "574980488.588202"
+            timestampString = "574981252.2204469"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RpiMovieAppTests/TestRPIMovisStorage.swift"
-            timestampString = "574980488.588295"
+            timestampString = "574981252.2205451"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RpiMovieAppTests/TestRPIMovisStorage.swift"
-            timestampString = "574980488.588383"
+            timestampString = "574981252.220639"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RpiMovieAppTests/TestRPIMovisStorage.swift"
-            timestampString = "574980488.588709"
+            timestampString = "574981252.2210701"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
@@ -106,12 +106,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RpiMovieAppTests/TestRPIMovisStorage.swift"
-            timestampString = "574980488.588775"
+            timestampString = "574981252.2211781"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
             endingLineNumber = "45"
             landmarkName = "testRPIMovieLoader()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RpiMovieApp/Singletones/RPIMovieLoader.swift"
+            timestampString = "574981252.221258"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "fetchMovies(kind:page:text:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
