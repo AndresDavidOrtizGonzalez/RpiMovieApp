@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "RPIHome.viewDidLoad():RPIHome.swift">
+      </ContextState>
+      <ContextState
+         contextName = "RPIMovieStorage.init():RPIMovieStorage.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "documentsURL.appendingPathComponent(&quot;popular&quot;).absoluteString">
+            </PersistentString>
+            <PersistentString
+               value = "documentsURL.appendingPathComponent(&quot;popular&quot;)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RPIMovieDetailedViewController.tableView(_:cellForRowAt:):RPIMovieDetailedViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.videoURL">
+            </PersistentString>
+            <PersistentString
+               value = "cell.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in RPIHome.fetchData(text:):RPIHome.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.isSearching!">
+            </PersistentString>
+            <PersistentString
+               value = "self.animationStyle">
+            </PersistentString>
+            <PersistentString
+               value = "page">
+            </PersistentString>
+            <PersistentString
+               value = "self.movies.count">
+            </PersistentString>
+            <PersistentString
+               value = "self.isLoading!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RPIMovieStorage.retrieveArray(category:):RPIMovieStorage.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in RPIMovieLoader.fetchMovies(kind:page:text:completion:):RPIMovieLoader.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "category">
+            </PersistentString>
+            <PersistentString
+               value = "kind">
+            </PersistentString>
+            <PersistentString
+               value = "RPIMovieStorage.shared.popularMovies">
+            </PersistentString>
+            <PersistentString
+               value = "movieCategoryPath">
+            </PersistentString>
+            <PersistentString
+               value = "page">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in RPIHome.fetchData(kind:):RPIHome.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.movies.count - 20">
+            </PersistentString>
+            <PersistentString
+               value = "toRemove-1">
+            </PersistentString>
+            <PersistentString
+               value = "self.movies.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in RPIMovieLoader.fetchMovies(kind:completion:):RPIMovieLoader.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "JSONSerialization.jsonObject(with: data!, options: []) as! NSDictionary">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RPIHome.tableView(_:willDisplay:forRowAt:):RPIHome.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "movies.count - 1">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RPIMovieStorage.saveMovieOnDisk(_:category:):RPIMovieStorage.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "fileURL.absoluteString">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "YouTubePlayerView.playerHTMLPath():YouTubePlayer.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "YouTubePlayerView.self">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RPIMovieLoader.fetchMovies(kind:page:text:completion:):RPIMovieLoader.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "movieCategoryPath!">
+            </PersistentString>
+            <PersistentString
+               value = "URLQueryItem(name: &quot;query&quot;, value: text)">
+            </PersistentString>
+            <PersistentString
+               value = "RPIMovieStorage.shared">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in RPIMovieLoader.fetchMovies(kind:page:completion:):RPIMovieLoader.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RPIHome.fetchData(text:):RPIHome.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "page!">
+            </PersistentString>
+            <PersistentString
+               value = "category!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RPIMovieStorage.directoryExistsAtPath(_:):RPIMovieStorage.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "fileManager.fileExists(atPath: &quot;/Users/andresortiz/Library/Developer/CoreSimulator/Devices/1A33ACED-6882-40E9-B398-93334DCFA001/data/Containers/Data/Application/F1DD0FAC-7D93-43DC-88B9-56C88D7E62A3/Documents/popular/&quot;, isDirectory: &amp;isDirectory)">
+            </PersistentString>
+            <PersistentString
+               value = "exists.boolValue">
+            </PersistentString>
+            <PersistentString
+               value = "isDirectory.boolValue">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in RPIMovieLoader.fetchMovieVideo(movieId:completion:):RPIMovieLoader.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "video[&quot;key&quot;] as! String">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RPIHome.changeCategory(sender:):RPIHome.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "tableView.contentInset.top">
+            </PersistentString>
+            <PersistentString
+               value = "tableView.adjustedContentInset.top">
+            </PersistentString>
+            <PersistentString
+               value = "self.tableView">
+            </PersistentString>
+            <PersistentString
+               value = "page">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

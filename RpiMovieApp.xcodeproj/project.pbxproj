@@ -7,12 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180036AF28FD40E488A5BC46 /* Pods_RpiMovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6486FEF6E476E6F9071EB30F /* Pods_RpiMovieApp.framework */; };
+		3C250EB62242B6F300C982F6 /* RPIMovieDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C250EB52242B6F300C982F6 /* RPIMovieDetailedViewController.swift */; };
+		3C250EB82242B9EF00C982F6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3C250EB72242B9EF00C982F6 /* Podfile */; };
+		3C250EC22242D68900C982F6 /* YouTubePlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C250EC12242D68900C982F6 /* YouTubePlayer.framework */; };
+		3C250EC42242D68E00C982F6 /* YouTubePlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C250EC12242D68900C982F6 /* YouTubePlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3C250EC72242DDDE00C982F6 /* RPIDateRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C250EC62242DDDE00C982F6 /* RPIDateRange.swift */; };
+		3C250EC92242E16500C982F6 /* RPIMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C250EC82242E16500C982F6 /* RPIMedia.swift */; };
+		3C250ECB2242E18300C982F6 /* RPIVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C250ECA2242E18300C982F6 /* RPIVideo.swift */; };
+		3C6C3AA0224512A300671684 /* RPIMovieStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6C3A9F224512A300671684 /* RPIMovieStorage.swift */; };
+		3C6C3AA2224539A000671684 /* RPIReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6C3AA1224539A000671684 /* RPIReachability.swift */; };
+		3C6C3AA722455D0600671684 /* TestRPIMovisStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6C3AA622455D0600671684 /* TestRPIMovisStorage.swift */; };
 		3CC3AC1A223F2EDF0018E7E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC3AC19223F2EDF0018E7E3 /* AppDelegate.swift */; };
-		3CC3AC1C223F2EDF0018E7E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC3AC1B223F2EDF0018E7E3 /* ViewController.swift */; };
-		3CC3AC1F223F2EDF0018E7E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC3AC1D223F2EDF0018E7E3 /* Main.storyboard */; };
 		3CC3AC21223F2EEC0018E7E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CC3AC20223F2EEC0018E7E3 /* Assets.xcassets */; };
 		3CC3AC24223F2EEC0018E7E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC3AC22223F2EEC0018E7E3 /* LaunchScreen.storyboard */; };
 		3CC3AC2F223F2EEC0018E7E3 /* RpiMovieAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC3AC2E223F2EEC0018E7E3 /* RpiMovieAppTests.swift */; };
+		3CC3AC42223F37160018E7E3 /* RPIMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC3AC41223F37160018E7E3 /* RPIMovie.swift */; };
+		3CC3AC46223F3DF00018E7E3 /* RPIMovieLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC3AC45223F3DF00018E7E3 /* RPIMovieLoader.swift */; };
+		3CC3AC48223F48EB0018E7E3 /* RPIHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC3AC47223F48EB0018E7E3 /* RPIHome.swift */; };
+		3CC3AC4B223F4A8F0018E7E3 /* RpiCustomMovieTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC3AC4A223F4A8F0018E7E3 /* RpiCustomMovieTableCell.swift */; };
+		3CC3AC4D223F55D90018E7E3 /* RPISearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC3AC4C223F55D90018E7E3 /* RPISearch.swift */; };
+		3CDA950022412052000E4219 /* functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDA94FF22412052000E4219 /* functions.swift */; };
+		5313EB618F96A6C920465EAA /* Pods_RpiMovieAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDCC9E5C4806BC0B37CE62F /* Pods_RpiMovieAppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,17 +41,51 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3C250EC52242D68F00C982F6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3C250EC42242D68E00C982F6 /* YouTubePlayer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0DB584DADE34B21F9248997C /* Pods-RpiMovieApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RpiMovieApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RpiMovieApp/Pods-RpiMovieApp.debug.xcconfig"; sourceTree = "<group>"; };
+		2E4AB426B6708FFB1FEAD6B7 /* Pods-RpiMovieApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RpiMovieApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RpiMovieApp/Pods-RpiMovieApp.release.xcconfig"; sourceTree = "<group>"; };
+		3C250EB52242B6F300C982F6 /* RPIMovieDetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPIMovieDetailedViewController.swift; sourceTree = "<group>"; };
+		3C250EB72242B9EF00C982F6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3C250EC12242D68900C982F6 /* YouTubePlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YouTubePlayer.framework; sourceTree = "<group>"; };
+		3C250EC62242DDDE00C982F6 /* RPIDateRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPIDateRange.swift; sourceTree = "<group>"; };
+		3C250EC82242E16500C982F6 /* RPIMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPIMedia.swift; sourceTree = "<group>"; };
+		3C250ECA2242E18300C982F6 /* RPIVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPIVideo.swift; sourceTree = "<group>"; };
+		3C6C3A9F224512A300671684 /* RPIMovieStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPIMovieStorage.swift; sourceTree = "<group>"; };
+		3C6C3AA1224539A000671684 /* RPIReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPIReachability.swift; sourceTree = "<group>"; };
+		3C6C3AA322455B5500671684 /* RpiMovieAppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RpiMovieAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		3C6C3AA622455D0600671684 /* TestRPIMovisStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRPIMovisStorage.swift; sourceTree = "<group>"; };
 		3CC3AC16223F2EDF0018E7E3 /* RpiMovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RpiMovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CC3AC19223F2EDF0018E7E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3CC3AC1B223F2EDF0018E7E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3CC3AC1E223F2EDF0018E7E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3CC3AC20223F2EEC0018E7E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CC3AC23223F2EEC0018E7E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CC3AC25223F2EEC0018E7E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CC3AC2A223F2EEC0018E7E3 /* RpiMovieAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RpiMovieAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CC3AC2E223F2EEC0018E7E3 /* RpiMovieAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RpiMovieAppTests.swift; sourceTree = "<group>"; };
 		3CC3AC30223F2EEC0018E7E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CC3AC41223F37160018E7E3 /* RPIMovie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPIMovie.swift; sourceTree = "<group>"; };
+		3CC3AC45223F3DF00018E7E3 /* RPIMovieLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPIMovieLoader.swift; sourceTree = "<group>"; };
+		3CC3AC47223F48EB0018E7E3 /* RPIHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPIHome.swift; sourceTree = "<group>"; };
+		3CC3AC4A223F4A8F0018E7E3 /* RpiCustomMovieTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RpiCustomMovieTableCell.swift; sourceTree = "<group>"; };
+		3CC3AC4C223F55D90018E7E3 /* RPISearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPISearch.swift; sourceTree = "<group>"; };
+		3CDA94FF22412052000E4219 /* functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = functions.swift; sourceTree = "<group>"; };
+		6486FEF6E476E6F9071EB30F /* Pods_RpiMovieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RpiMovieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82CDB198C0410D68A57217D4 /* Pods-RpiMovieAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RpiMovieAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RpiMovieAppTests/Pods-RpiMovieAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9CDCC9E5C4806BC0B37CE62F /* Pods_RpiMovieAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RpiMovieAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCD1BC393B23D4574FDDE665 /* Pods-RpiMovieAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RpiMovieAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RpiMovieAppTests/Pods-RpiMovieAppTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +93,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180036AF28FD40E488A5BC46 /* Pods_RpiMovieApp.framework in Frameworks */,
+				3C250EC22242D68900C982F6 /* YouTubePlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +102,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5313EB618F96A6C920465EAA /* Pods_RpiMovieAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1179E667550B5A61B22B3418 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0DB584DADE34B21F9248997C /* Pods-RpiMovieApp.debug.xcconfig */,
+				2E4AB426B6708FFB1FEAD6B7 /* Pods-RpiMovieApp.release.xcconfig */,
+				82CDB198C0410D68A57217D4 /* Pods-RpiMovieAppTests.debug.xcconfig */,
+				FCD1BC393B23D4574FDDE665 /* Pods-RpiMovieAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3C250EB92242C9E600C982F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C250EC12242D68900C982F6 /* YouTubePlayer.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 		3CC3AC0D223F2EDF0018E7E3 = {
 			isa = PBXGroup;
 			children = (
+				3C250EB72242B9EF00C982F6 /* Podfile */,
 				3CC3AC18223F2EDF0018E7E3 /* RpiMovieApp */,
 				3CC3AC2D223F2EEC0018E7E3 /* RpiMovieAppTests */,
 				3CC3AC17223F2EDF0018E7E3 /* Products */,
+				1179E667550B5A61B22B3418 /* Pods */,
+				EF77CFCC19BF55D134A3EDF6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,9 +152,13 @@
 		3CC3AC18223F2EDF0018E7E3 /* RpiMovieApp */ = {
 			isa = PBXGroup;
 			children = (
+				3C250EB92242C9E600C982F6 /* Frameworks */,
+				3CC3AC39223F361F0018E7E3 /* Singletones */,
+				3CDA950122412059000E4219 /* Global */,
+				3CC3AC3B223F36420018E7E3 /* Models */,
+				3CC3AC49223F4A770018E7E3 /* Views */,
+				3CC3AC3A223F36280018E7E3 /* Controllers */,
 				3CC3AC19223F2EDF0018E7E3 /* AppDelegate.swift */,
-				3CC3AC1B223F2EDF0018E7E3 /* ViewController.swift */,
-				3CC3AC1D223F2EDF0018E7E3 /* Main.storyboard */,
 				3CC3AC20223F2EEC0018E7E3 /* Assets.xcassets */,
 				3CC3AC22223F2EEC0018E7E3 /* LaunchScreen.storyboard */,
 				3CC3AC25223F2EEC0018E7E3 /* Info.plist */,
@@ -91,9 +170,67 @@
 			isa = PBXGroup;
 			children = (
 				3CC3AC2E223F2EEC0018E7E3 /* RpiMovieAppTests.swift */,
+				3C6C3AA622455D0600671684 /* TestRPIMovisStorage.swift */,
 				3CC3AC30223F2EEC0018E7E3 /* Info.plist */,
+				3C6C3AA322455B5500671684 /* RpiMovieAppTests-Bridging-Header.h */,
 			);
 			path = RpiMovieAppTests;
+			sourceTree = "<group>";
+		};
+		3CC3AC39223F361F0018E7E3 /* Singletones */ = {
+			isa = PBXGroup;
+			children = (
+				3CC3AC45223F3DF00018E7E3 /* RPIMovieLoader.swift */,
+				3C6C3A9F224512A300671684 /* RPIMovieStorage.swift */,
+				3C6C3AA1224539A000671684 /* RPIReachability.swift */,
+			);
+			path = Singletones;
+			sourceTree = "<group>";
+		};
+		3CC3AC3A223F36280018E7E3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3C250EB52242B6F300C982F6 /* RPIMovieDetailedViewController.swift */,
+				3CC3AC47223F48EB0018E7E3 /* RPIHome.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3CC3AC3B223F36420018E7E3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3CC3AC41223F37160018E7E3 /* RPIMovie.swift */,
+				3CC3AC4C223F55D90018E7E3 /* RPISearch.swift */,
+				3C250EC62242DDDE00C982F6 /* RPIDateRange.swift */,
+				3C250EC82242E16500C982F6 /* RPIMedia.swift */,
+				3C250ECA2242E18300C982F6 /* RPIVideo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3CC3AC49223F4A770018E7E3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3CC3AC4A223F4A8F0018E7E3 /* RpiCustomMovieTableCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3CDA950122412059000E4219 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				3CDA94FF22412052000E4219 /* functions.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		EF77CFCC19BF55D134A3EDF6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6486FEF6E476E6F9071EB30F /* Pods_RpiMovieApp.framework */,
+				9CDCC9E5C4806BC0B37CE62F /* Pods_RpiMovieAppTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,9 +240,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CC3AC33223F2EEC0018E7E3 /* Build configuration list for PBXNativeTarget "RpiMovieApp" */;
 			buildPhases = (
+				167582350D699D8904F39A33 /* [CP] Check Pods Manifest.lock */,
 				3CC3AC12223F2EDF0018E7E3 /* Sources */,
 				3CC3AC13223F2EDF0018E7E3 /* Frameworks */,
 				3CC3AC14223F2EDF0018E7E3 /* Resources */,
+				EB0B1018B1ED58B8DDB3FE2A /* [CP] Embed Pods Frameworks */,
+				3C250EC52242D68F00C982F6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +260,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CC3AC36223F2EEC0018E7E3 /* Build configuration list for PBXNativeTarget "RpiMovieAppTests" */;
 			buildPhases = (
+				4B43712B549A5953F868DBCD /* [CP] Check Pods Manifest.lock */,
 				3CC3AC26223F2EEC0018E7E3 /* Sources */,
 				3CC3AC27223F2EEC0018E7E3 /* Frameworks */,
 				3CC3AC28223F2EEC0018E7E3 /* Resources */,
@@ -149,6 +290,7 @@
 					};
 					3CC3AC29223F2EEC0018E7E3 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = 3CC3AC15223F2EDF0018E7E3;
 					};
 				};
@@ -177,9 +319,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C250EB82242B9EF00C982F6 /* Podfile in Resources */,
 				3CC3AC24223F2EEC0018E7E3 /* LaunchScreen.storyboard in Resources */,
 				3CC3AC21223F2EEC0018E7E3 /* Assets.xcassets in Resources */,
-				3CC3AC1F223F2EDF0018E7E3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,13 +334,85 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		167582350D699D8904F39A33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RpiMovieApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B43712B549A5953F868DBCD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RpiMovieAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB0B1018B1ED58B8DDB3FE2A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RpiMovieApp/Pods-RpiMovieApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RpiMovieApp/Pods-RpiMovieApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3CC3AC12223F2EDF0018E7E3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CC3AC1C223F2EDF0018E7E3 /* ViewController.swift in Sources */,
+				3C250EC72242DDDE00C982F6 /* RPIDateRange.swift in Sources */,
+				3CC3AC4B223F4A8F0018E7E3 /* RpiCustomMovieTableCell.swift in Sources */,
+				3C250EC92242E16500C982F6 /* RPIMedia.swift in Sources */,
+				3CC3AC4D223F55D90018E7E3 /* RPISearch.swift in Sources */,
+				3C6C3AA0224512A300671684 /* RPIMovieStorage.swift in Sources */,
+				3C250ECB2242E18300C982F6 /* RPIVideo.swift in Sources */,
+				3CDA950022412052000E4219 /* functions.swift in Sources */,
+				3CC3AC42223F37160018E7E3 /* RPIMovie.swift in Sources */,
+				3CC3AC46223F3DF00018E7E3 /* RPIMovieLoader.swift in Sources */,
+				3C250EB62242B6F300C982F6 /* RPIMovieDetailedViewController.swift in Sources */,
+				3C6C3AA2224539A000671684 /* RPIReachability.swift in Sources */,
 				3CC3AC1A223F2EDF0018E7E3 /* AppDelegate.swift in Sources */,
+				3CC3AC48223F48EB0018E7E3 /* RPIHome.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +420,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C6C3AA722455D0600671684 /* TestRPIMovisStorage.swift in Sources */,
 				3CC3AC2F223F2EEC0018E7E3 /* RpiMovieAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,14 +436,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3CC3AC1D223F2EDF0018E7E3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3CC3AC1E223F2EDF0018E7E3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3CC3AC22223F2EEC0018E7E3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,7 +498,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -346,7 +553,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -358,11 +565,17 @@
 		};
 		3CC3AC34223F2EEC0018E7E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DB584DADE34B21F9248997C /* Pods-RpiMovieApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZP89874C9W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RpiMovieApp/Frameworks",
+				);
 				INFOPLIST_FILE = RpiMovieApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,11 +589,17 @@
 		};
 		3CC3AC35223F2EEC0018E7E3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E4AB426B6708FFB1FEAD6B7 /* Pods-RpiMovieApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZP89874C9W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RpiMovieApp/Frameworks",
+				);
 				INFOPLIST_FILE = RpiMovieApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -394,9 +613,11 @@
 		};
 		3CC3AC37223F2EEC0018E7E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82CDB198C0410D68A57217D4 /* Pods-RpiMovieAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZP89874C9W;
 				INFOPLIST_FILE = RpiMovieAppTests/Info.plist;
@@ -407,6 +628,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Andres.RpiMovieAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RpiMovieAppTests/RpiMovieAppTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RpiMovieApp.app/RpiMovieApp";
@@ -415,9 +638,11 @@
 		};
 		3CC3AC38223F2EEC0018E7E3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCD1BC393B23D4574FDDE665 /* Pods-RpiMovieAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZP89874C9W;
 				INFOPLIST_FILE = RpiMovieAppTests/Info.plist;
@@ -428,6 +653,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Andres.RpiMovieAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RpiMovieAppTests/RpiMovieAppTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RpiMovieApp.app/RpiMovieApp";
