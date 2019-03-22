@@ -66,3 +66,4 @@ Qué características tiene, según su opinión, un “buen” código o código
     
     
 
+![alt text](https://flic.kr/p/2fhtToX)
