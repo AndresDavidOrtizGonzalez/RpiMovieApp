@@ -8,53 +8,194 @@
 
 import UIKit
 
-class RPIHome: UITableViewController {
+class RPIHome: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    //private let headerId = "CustomTableViewHeader"
-    //private let footerId = "CustomTableViewFooter"
     private let cellId = "CustomMovieTableViewCell"
     
-
+    var isSearching: Bool?
+    var isLoading: Bool?
+    var page: Int?
     var movies = [Movie]()
     var category : Int?
     var animationStyle : UITableView.RowAnimation?
+    let tableView: UITableView = UITableView()
     
+    let svCategory : UISegmentedControl = {
+        let items = ["Popular", "Top Rated", "Upcoming"]
+        let customSC = UISegmentedControl(items: items)
+        customSC.selectedSegmentIndex = 0
+        customSC.layer.cornerRadius = 5.0
+        customSC.backgroundColor = .white
+        customSC.tintColor = .darkGray
+        return customSC
+    }()
+    
+    let vSeachPanel : UIView = {
+        let vPanel = UIView()
+        vPanel.backgroundColor = UIColor.groupTableViewBackground
+        return vPanel
+    }()
+    
+    let txtSearch : UITextField = {
+       let text = UITextField()
+       text.autocorrectionType = UITextAutocorrectionType.no
+       text.borderStyle = UITextField.BorderStyle.roundedRect
+       //text.layer.masksToBounds = true
+       //text.layer.cornerRadius = 6
+       text.backgroundColor = .white
+       text.placeholder = "Write something and tab Search..."
+       return text
+    }()
+    
+    let btnSearch : UIButton = {
+        let button = UIButton()
+        button.setTitle("Search", for: .normal)
+        button.backgroundColor = .black
+        button.setTitleColor(.white, for: .normal)
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = 5
+        return button
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.isSearching = false
+        self.isLoading = false
+        self.page = 1
         self.category = 1
-        self.animationStyle = .none
+        self.animationStyle = UITableView.RowAnimation.none
+        self.navigationController?.navigationBar.topItem?.title = "Movie App"
         
         setupViews()
+        setupActions()
         
-        
-        tableView.register(RpiCustomMovieTableCell.self, forCellReuseIdentifier: cellId)
-        fetchData(kind: category!)
+        fetchData(text: txtSearch.text!)
     }
     
-    func fetchData(kind: Int){
+    override func willAnimateRotation(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
+        self.tableView.reloadData()
+    }
+    
+    func setupViews(){
         
-        RPIMovieLoader.shared.fetchMovies(kind: kind){
+        var margins = view.layoutMarginsGuide
+
+        if #available(iOS 11.0, *) {
+            margins = view.safeAreaLayoutGuide
+        }
+        
+        self.view.backgroundColor = .white
+        
+
+        self.view.addSubview(svCategory)
+        
+        svCategory.translatesAutoresizingMaskIntoConstraints = false
+        svCategory.topAnchor.constraint(equalTo: margins.topAnchor, constant: 10).isActive = true
+        svCategory.leftAnchor.constraint(equalTo: margins.leftAnchor, constant: 10).isActive = true
+        svCategory.rightAnchor.constraint(equalTo: margins.rightAnchor, constant: -10).isActive = true
+        svCategory.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        self.view.addSubview(vSeachPanel)
+        
+        vSeachPanel.translatesAutoresizingMaskIntoConstraints = false
+        vSeachPanel.topAnchor.constraint(equalTo: margins.topAnchor, constant: 70).isActive = true
+        vSeachPanel.leftAnchor.constraint(equalTo: margins.leftAnchor, constant: 0).isActive = true
+        vSeachPanel.rightAnchor.constraint(equalTo: margins.rightAnchor, constant: 0).isActive = true
+        vSeachPanel.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        
+        self.vSeachPanel.addSubview(txtSearch)
+        
+        txtSearch.translatesAutoresizingMaskIntoConstraints = false
+        txtSearch.topAnchor.constraint(equalTo: vSeachPanel.layoutMarginsGuide.topAnchor, constant: 2).isActive = true
+        txtSearch.leftAnchor.constraint(equalTo: vSeachPanel.layoutMarginsGuide.leftAnchor, constant: 5).isActive = true
+        txtSearch.rightAnchor.constraint(equalTo: vSeachPanel.layoutMarginsGuide.rightAnchor, constant: -80).isActive = true
+        txtSearch.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        
+        self.vSeachPanel.addSubview(btnSearch)
+        
+        btnSearch.translatesAutoresizingMaskIntoConstraints = false
+        btnSearch.topAnchor.constraint(equalTo: vSeachPanel.layoutMarginsGuide.topAnchor, constant: 0).isActive = true
+        btnSearch.widthAnchor.constraint(equalToConstant: 70).isActive = true
+        btnSearch.rightAnchor.constraint(equalTo: vSeachPanel.layoutMarginsGuide.rightAnchor, constant: -5).isActive = true
+        btnSearch.heightAnchor.constraint(equalToConstant: 34).isActive = true
+        
+        self.view.addSubview(tableView)
+        
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.topAnchor.constraint(equalTo: margins.topAnchor, constant: 120).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: 0).isActive = true
+        tableView.leftAnchor.constraint(equalTo: margins.leftAnchor, constant: 0).isActive = true
+        tableView.rightAnchor.constraint(equalTo: margins.rightAnchor, constant: 0).isActive = true
+ 
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        tableView.register(RpiCustomMovieTableCell.self, forCellReuseIdentifier: cellId)
+        
+    }
+    
+    func setupActions(){
+        svCategory.addTarget(self, action: #selector(self.changeCategory(sender:)), for: .valueChanged)
+        btnSearch.addTarget(self, action: #selector(self.searchWithText(sender:)), for: .touchUpInside)
+    }
+    
+    func fetchData(text: String){
+        
+        RPIMovieLoader.shared.fetchMovies(kind: category!, page: page!, text: text){
             (result: [Movie], success) in
             if (success){
                 if (self.movies.count > 0){
-                    var indexPathToReload = [IndexPath]()
-                    for cell in self.tableView.visibleCells{
-                        indexPathToReload.append(self.tableView.indexPath(for: cell)!)
+                    if self.isSearching! {
+                        self.movies = result
+                        self.tableView.reloadData()
                     }
-                    self.movies = result
-                    self.tableView.reloadRows(at: indexPathToReload, with: self.animationStyle!)
+                    else if self.isLoading! {
+                        self.movies.append(contentsOf: result)
+                        self.tableView.reloadData()
+                    }
+                    else{
+                        if (self.movies.count == 20){
+                            /*if (self.movies.count == result.count){
+                                var indexPathToReload = [IndexPath]()
+                                for cell in self.tableView.visibleCells{
+                                    indexPathToReload.append(self.tableView.indexPath(for: cell)!)
+                                }
+                                self.movies = result
+                                self.tableView.reloadRows(at: indexPathToReload, with: self.animationStyle!)
+                            }
+                            else{*/
+                                self.movies = result
+                                self.tableView.reloadSections(IndexSet(integer: 0), with: self.animationStyle!)
+                            //}
+                        }
+                        else{
+                            self.movies = result
+                            self.tableView.reloadData()
+                        }
+                    }
                 }
                 else{
                     self.movies = result
                     self.tableView.reloadData()
                 }
             }
+            self.isLoading = false
+            self.isSearching = false
         }
     }
     
     
+
+    
     @objc func changeCategory(sender: UISegmentedControl) {
+        let isConnected = RPIReachability.shared.isConnected()
+        if isConnected{
+            self.txtSearch.text = ""
+        }
+
+        
         if (sender.selectedSegmentIndex + 1 > self.category!)
         {
             self.animationStyle = UITableView.RowAnimation.left
@@ -78,62 +219,41 @@ class RPIHome: UITableViewController {
                 print("Popular")
                 self.category = 1;
         }
-        fetchData(kind:self.category!)
+        page = 1
+        fetchData(text:txtSearch.text!)
     }
     
-    func setupViews(){
-        let items = ["Popular", "Top Rated", "Upcoming"]
-        let customSC = UISegmentedControl(items: items)
-        customSC.selectedSegmentIndex = 0
-        
-        // Set up Frame and SegmentedControl
-        let frame = view.bounds
-        customSC.frame = CGRect(x: frame.minX + 10, y: frame.minY + 5,
-                                width: frame.width - 20, height: 50)
-        
-        
-        // Style the Segmented Control
-        customSC.layer.cornerRadius = 5.0
-        customSC.backgroundColor = .white
-        customSC.tintColor = .blue
-        
-        // Add target action method
-        customSC.addTarget(self, action: #selector(self.changeCategory(sender:)), for: .valueChanged)
-        
-        self.view.addSubview(customSC)
-
+    @objc func searchWithText(sender: UIButton){
+        let isConnected = RPIReachability.shared.isConnected()
+        if isConnected{
+            svCategory.selectedSegmentIndex = UISegmentedControl.noSegment
+        }
+        self.isSearching = true
+        fetchData(text: txtSearch.text!)
     }
+    
 
-    
-    
-    
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return  self.movies.count
     }
 
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomMovieTableViewCell", for: indexPath) as! RpiCustomMovieTableCell
 
         let movie = movies[indexPath.row]
         
-        /*let title = movie["title"] as! String
-        let plot = movie["overview"] as! String
-        let cover = movie["poster_path"] as! String
-        let baseURL = "https://image.tmdb.org/t/p/w500"
-        let url = URL(string: baseURL + cover)
-        let placeholderImage = UIImage(named: "movieplaceholder")!*/
-        
+        //let placeholderImage = UIImage(named: "movieplaceholder")!*/
         //cell.imgMovieCover.af_setImage(withURL: url!, placeholderImage: placeholderImage)
         
         cell.imgMoviePoster.image = UIImage.init(named: "movieplaceholder")
@@ -143,54 +263,29 @@ class RPIHome: UITableViewController {
     }
     
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
     }
- 
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movie = movies[indexPath.row]
+        let targetController =  RPIMovieDetailedViewController()
+        targetController.movie = movie
+        self.navigationController?.pushViewController(targetController, animated: true)
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+            let lastElement = movies.count - 1
+            let isConnected = RPIReachability.shared.isConnected()
+            if !(isLoading!) && (indexPath.row == lastElement) && movies.count > 19 && isConnected  {
+                isLoading = true
+                page = page! + 1
+                
+                fetchData(text: txtSearch.text!)
+            }
 
     }
-    */
 
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+
