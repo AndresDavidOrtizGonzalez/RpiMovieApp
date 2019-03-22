@@ -68,10 +68,18 @@ Qué características tiene, según su opinión, un “buen” código o código
 
 <a data-flickr-embed="true"  href="https://www.flickr.com/photos/162890832@N07/47444192151/in/dateposted-public/" title="Online Popular"><img src="https://farm8.staticflickr.com/7867/47444192151_d0c8f576d3_b.jpg" width="529" height="975" alt="Online Popular"></a>
 
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/162890832@N07/47444191851/in/dateposted-public/" title="Online Browse"><img src="https://farm8.staticflickr.com/7920/47444191851_5a17f4d672_b.jpg" width="490" height="961" alt="Online Browse"></a>
 
 <a data-flickr-embed="true"  href="https://www.flickr.com/photos/162890832@N07/47444191901/in/dateposted-public/" title="Online Upcoming"><img src="https://farm8.staticflickr.com/7880/47444191901_2b72f94791_b.jpg" width="518" height="978" alt="Online Upcoming"></a>
 
 <a data-flickr-embed="true"  href="https://www.flickr.com/photos/162890832@N07/47444192021/in/dateposted-public/" title="Online TopRated"><img src="https://farm8.staticflickr.com/7909/47444192021_2769170570_b.jpg" width="501" height="975" alt="Online TopRated"></a>
 
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/162890832@N07/47444192151/in/dateposted-public/" title="Online Popular"><img src="https://farm8.staticflickr.com/7867/47444192151_d0c8f576d3_b.jpg" width="529" height="975" alt="Online Popular"></a>
+
+Offline Browsing
+
+
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/162890832@N07/47444191741/in/dateposted-public/" title="Offline Browse"><img src="https://farm8.staticflickr.com/7884/47444191741_e4eae8a584_b.jpg" width="519" height="977" alt="Offline Browse">
+
+Online Browsing
+
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/162890832@N07/47444191851/in/dateposted-public/" title="Online Browse"><img src="https://farm8.staticflickr.com/7920/47444191851_5a17f4d672_b.jpg" width="490" height="961" alt="Online Browse"></a>
+
