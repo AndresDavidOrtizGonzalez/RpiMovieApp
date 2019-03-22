@@ -8,30 +8,78 @@
 
 import UIKit
 
+
 class RPIMovieLoader {
     static let shared = RPIMovieLoader()
     init() {}
     
     var movie : Movie? = nil
+    var movieCategoryPath : String?
     
-    func fetchMovies(kind: Int, completion: @escaping (_ result: [Movie], _ success: Bool) -> Void) {
+    func fetchMovieVideo(movieId: Int64, completion: @escaping (_ result: String, _ success: Bool) -> Void)
+    {
+        
+        let url = NSURL(string: "https://api.themoviedb.org/3/movie/\(movieId)/videos?api_key=30f03a109d382c80fe5ef86868633ff7")
+        
+        let request = URLRequest(url: url! as URL)
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            DispatchQueue.main.async {
+                if let error = error {
+                    print("error=\(error)")
+                    return
+                }
+                
+                do {
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    let search = try decoder.decode(Media.self, from: data!)
+                    let video = search.results.first
+                    let path = video?.key
+                    completion(path!,true)
+                }
+                catch let jsonError {
+                    print("Failed to decode ", jsonError)
+                    completion("FJkr_TwfwZg",true)
+                }
+            }
+        }.resume()
+        
+        
+    }
+    
+    func fetchMovies(kind: Int, page: Int, text: String, completion: @escaping (_ result: [Movie], _ success: Bool) -> Void) {
 
-        //let defaults = UserDefaults.standard
-        let isConnected = true //defaults.bool(forKey: "connected")
+        
+        let isConnected = RPIReachability.shared.isConnected()
+        
+        movieCategoryPath = "popular"
+        var category = "popular"
+
+        switch kind {
+        case 2:
+            category = "top_rated"
+            movieCategoryPath = "topRated"
+        case 3:
+            category = "upcoming"
+            movieCategoryPath = "upcoming"
+        default:
+            category = "popular"
+            movieCategoryPath = "popular"
+        }
+        
         
         if isConnected
         {
-            var url = NSURL(string: "https://api.themoviedb.org/3/movie/popular?api_key=30f03a109d382c80fe5ef86868633ff7")
+
             
-            switch kind {
-            case 2:
-                url = NSURL(string: "https://api.themoviedb.org/3/movie/top_rated?api_key=30f03a109d382c80fe5ef86868633ff7")
-            case 3:
-                url = NSURL(string: "https://api.themoviedb.org/3/movie/upcoming?api_key=30f03a109d382c80fe5ef86868633ff7")
-            default:
-                url = NSURL(string: "https://api.themoviedb.org/3/movie/popular?api_key=30f03a109d382c80fe5ef86868633ff7")
+            var url = NSURL(string: "https://api.themoviedb.org/3/movie/\(category)?api_key=30f03a109d382c80fe5ef86868633ff7&page=\(page)")
+            
+            if(text != "")
+            {
+                let urledText = text.addingPercentEncoding(withAllowedCharacters: .alphanumerics)
+                url = NSURL(string: "https://api.themoviedb.org/3/search/movie?api_key=30f03a109d382c80fe5ef86868633ff7&page=\(page)&query=\(urledText ?? "")")
             }
-            
             
             let request = URLRequest(url: url! as URL)
             
@@ -42,15 +90,18 @@ class RPIMovieLoader {
                         return
                     }
                     
-                    
                     do {
                         let decoder = JSONDecoder()
                         decoder.keyDecodingStrategy = .convertFromSnakeCase
                         let search = try decoder.decode(Search.self, from: data!)
                         let movies = search.results
+                        if(text == ""){
+                            RPIMovieStorage.shared.saveAllOnDisk(movies: movies, category: self.movieCategoryPath!)
+                        }
                         completion(movies, true)
 
-                    }catch let jsonError {
+                    }
+                    catch let jsonError {
                         print("Failed to decode ", jsonError)
                         completion([], false)
                     }
@@ -59,10 +110,19 @@ class RPIMovieLoader {
         }
         else
         {
-            //aiLoader.isHidden = true
-            //self.fetchFromDataBase(kind: kind)
+            let movieStorage = RPIMovieStorage.shared
+            if(text != ""){
+                var movieArray = movieStorage.retrieveArray(category:self.movieCategoryPath!)
+                movieArray = movieArray.filter { $0.title.contains (text) }
+                completion(movieArray, true)
+            }
+            else{
+                completion(movieStorage.retrieveArray(category:self.movieCategoryPath!), true)
+            }
         }
         
     }
+    
+
     
 }
