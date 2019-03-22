@@ -57,6 +57,9 @@
                value = "category">
             </PersistentString>
             <PersistentString
+               value = "self.movieSearchText">
+            </PersistentString>
+            <PersistentString
                value = "kind">
             </PersistentString>
             <PersistentString

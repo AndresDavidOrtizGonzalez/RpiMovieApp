@@ -25,11 +25,15 @@ class TestRPIMovisStorage: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testRPIMovieStorage() {
+    func testRPIMovieLoader() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
-        loader?.fetchMovies(kind: 1, page: 1, text: ""){
+        
+        
+        var movieId : Int64
+        movieId = 1
+        /*loader?.fetchMovies(kind: 1, page: 1, text: ""){
             (result: [Movie], success) in
             XCTAssertEqual(20, result.count)
         }
@@ -41,7 +45,13 @@ class TestRPIMovisStorage: XCTestCase {
         
         loader?.fetchMovies(kind: 1, page: 1, text: "Captain"){
             (result: [Movie], success) in
+            movieId = (result.first?.id)!
             XCTAssertNotNil(result)
+        }*/
+        
+        loader?.fetchMovieVideo(movieId: movieId){
+            (result: String, success) in
+             XCTAssertNotNil(result)
         }
         
     }

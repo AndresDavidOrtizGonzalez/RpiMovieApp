@@ -15,6 +15,7 @@ class RPIMovieLoader {
     
     var movie : Movie? = nil
     var movieCategoryPath : String?
+    var movieSearchText: String?
     
     func fetchMovieVideo(movieId: Int64, completion: @escaping (_ result: String, _ success: Bool) -> Void)
     {
@@ -35,8 +36,13 @@ class RPIMovieLoader {
                     decoder.keyDecodingStrategy = .convertFromSnakeCase
                     let search = try decoder.decode(Media.self, from: data!)
                     let video = search.results.first
-                    let path = video?.key
-                    completion(path!,true)
+                    if ((video) != nil){
+                        let path = video?.key
+                        completion(path!,true)
+                    }
+                    else{
+                        completion("FJkr_TwfwZg",true)
+                    }
                 }
                 catch let jsonError {
                     print("Failed to decode ", jsonError)
@@ -51,6 +57,8 @@ class RPIMovieLoader {
     func fetchMovies(kind: Int, page: Int, text: String, completion: @escaping (_ result: [Movie], _ success: Bool) -> Void) {
 
         
+        movieSearchText = text
+
         let isConnected = RPIReachability.shared.isConnected()
         
         movieCategoryPath = "popular"
@@ -95,7 +103,7 @@ class RPIMovieLoader {
                         decoder.keyDecodingStrategy = .convertFromSnakeCase
                         let search = try decoder.decode(Search.self, from: data!)
                         let movies = search.results
-                        if(text == ""){
+                        if(self.movieSearchText == ""){
                             RPIMovieStorage.shared.saveAllOnDisk(movies: movies, category: self.movieCategoryPath!)
                         }
                         completion(movies, true)

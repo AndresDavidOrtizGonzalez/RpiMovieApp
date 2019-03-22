@@ -253,10 +253,14 @@ class RPIHome: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
         let movie = movies[indexPath.row]
         
-        //let placeholderImage = UIImage(named: "movieplaceholder")!*/
-        //cell.imgMovieCover.af_setImage(withURL: url!, placeholderImage: placeholderImage)
+        let baseURL = "https://image.tmdb.org/t/p/w500"
+        let url = URL(string: baseURL + movie.posterPath!)
+        let placeholderImage = UIImage(named: "movieplaceholder")!
         
-        cell.imgMoviePoster.image = UIImage.init(named: "movieplaceholder")
+        cell.imgMoviePoster.sd_imageTransition = .fade
+        cell.imgMoviePoster.sd_internalSetImage(with: url, placeholderImage: placeholderImage, operationKey: nil, setImageBlock: nil, progress: nil)
+        
+        //cell.imgMoviePoster.image = UIImage.init(named: "movieplaceholder")
         cell.lblMovieTitle.text = movie.title
         cell.lblMovieOverview.text = movie.overview
         return cell

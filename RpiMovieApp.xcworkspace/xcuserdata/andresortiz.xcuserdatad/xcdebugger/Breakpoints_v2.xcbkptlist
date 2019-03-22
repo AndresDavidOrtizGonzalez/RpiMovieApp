@@ -10,28 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RpiMovieAppTests/TestRPIMovisStorage.swift"
-            timestampString = "574972834.382737"
+            timestampString = "574976078.516469"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "testRPIMovieStorage()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RpiMovieAppTests/TestRPIMovisStorage.swift"
-            timestampString = "574972834.3833849"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "testRPIMovieStorage()"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "testRPIMovieLoader()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,23 +26,39 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RpiMovieAppTests/TestRPIMovisStorage.swift"
-            timestampString = "574972834.383659"
+            timestampString = "574976078.516795"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "testRPIMovieStorage()"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "testRPIMovieLoader()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RpiMovieAppTests/TestRPIMovisStorage.swift"
+            timestampString = "574976078.516863"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "testRPIMovieLoader()"
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "RpiMovieAppTests.TestRPIMovisStorage.testRPIMovieStorage() -&gt; ()"
                   moduleName = "RpiMovieAppTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andresortiz/Desktop/RpiMovieApp/RpiMovieAppTests/TestRPIMovisStorage.swift"
-                  timestampString = "574972843.4482729"
+                  timestampString = "574973771.913977"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "42"
@@ -66,14 +66,14 @@
                   offsetFromSymbolStart = "491">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #3 (Swift.Array&lt;RpiMovieApp.Movie&gt;, Swift.Bool) -&gt; () in RpiMovieAppTests.TestRPIMovisStorage.testRPIMovieStorage() -&gt; ()"
                   moduleName = "RpiMovieAppTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andresortiz/Desktop/RpiMovieApp/RpiMovieAppTests/TestRPIMovisStorage.swift"
-                  timestampString = "574972843.4516571"
+                  timestampString = "574973771.916523"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "42"
@@ -90,28 +90,140 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RpiMovieApp/Singletones/RPIMovieLoader.swift"
-            timestampString = "574972834.3839099"
+            timestampString = "574976078.516921"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "fetchMovies(kind:page:text:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RpiMovieApp/Singletones/RPIMovieLoader.swift"
+            timestampString = "574976078.517509"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "fetchMovies(kind:page:text:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RpiMovieAppTests/TestRPIMovisStorage.swift"
+            timestampString = "574976078.5177799"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "testRPIMovieLoader()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RpiMovieAppTests/TestRPIMovisStorage.swift"
+            timestampString = "574976078.517837"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "testRPIMovieLoader()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RpiMovieApp/Singletones/RPIMovieLoader.swift"
+            timestampString = "574976078.51789"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "fetchMovies(kind:page:text:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RpiMovieApp/Singletones/RPIMovieLoader.swift"
+            timestampString = "574976078.518139"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "fetchMovies(kind:page:text:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RpiMovieApp/Singletones/RPIMovieLoader.swift"
+            timestampString = "574976078.51837"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "fetchMovies(kind:page:text:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RpiMovieAppTests/TestRPIMovisStorage.swift"
+            timestampString = "574976078.5186009"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
             endingLineNumber = "54"
-            landmarkName = "fetchMovies(kind:page:text:completion:)"
+            landmarkName = "testRPIMovieLoader()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RpiMovieApp/Singletones/RPIMovieLoader.swift"
-            timestampString = "574972834.384109"
+            filePath = "RpiMovieAppTests/TestRPIMovisStorage.swift"
+            timestampString = "574976078.518648"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "fetchMovies(kind:page:text:completion:)"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "testRPIMovieLoader()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -122,44 +234,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RpiMovieAppTests/TestRPIMovisStorage.swift"
-            timestampString = "574972834.384159"
+            timestampString = "574976078.518688"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "testRPIMovieStorage()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RpiMovieAppTests/TestRPIMovisStorage.swift"
-            timestampString = "574972834.3844039"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "testRPIMovieStorage()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RpiMovieApp/Singletones/RPIMovieLoader.swift"
-            timestampString = "574972834.384639"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "fetchMovies(kind:page:text:completion:)"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "testRPIMovieLoader()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
