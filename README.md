@@ -62,9 +62,13 @@ Qué características tiene, según su opinión, un “buen” código o código
     Evitar codigo innecesario
     Evitar llamadas recursivas infinitas
     
-    Screen Shots
+ 
     
-    
+Video
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7UNEoH5SwXI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Screen Shots
 
 <a data-flickr-embed="true"  href="https://www.flickr.com/photos/162890832@N07/47444192151/in/dateposted-public/" title="Online Popular"><img src="https://farm8.staticflickr.com/7867/47444192151_d0c8f576d3_b.jpg" width="529" height="975" alt="Online Popular"></a>
 
@@ -77,7 +81,8 @@ Qué características tiene, según su opinión, un “buen” código o código
 Offline Browsing
 
 
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/162890832@N07/47444191741/in/dateposted-public/" title="Offline Browse"><img src="https://farm8.staticflickr.com/7884/47444191741_e4eae8a584_b.jpg" width="519" height="977" alt="Offline Browse">
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/162890832@N07/47444191741/in/dateposted-public/" title="Offline Browse"><img src="https://farm8.staticflickr.com/7884/47444191741_e4eae8a584_b.jpg" width="519" height="977" alt="Offline Browse"></a>
+
 
 Online Browsing
 
