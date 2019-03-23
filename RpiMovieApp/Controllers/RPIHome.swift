@@ -217,19 +217,15 @@ class RPIHome: UIViewController, UITableViewDataSource, UITableViewDelegate {
         {
             self.animationStyle = UITableView.RowAnimation.right
         }
-        
+        txtSearch.resignFirstResponder()
         switch sender.selectedSegmentIndex {
             case 0:
-                print("Popular")
                 self.category = 1;
             case 1:
-                print("Top Rated")
                 self.category = 2;
             case 2:
-                print("Upcoming")
                 self.category = 3;
             default:
-                print("Popular")
                 self.category = 1;
         }
         page = 1
