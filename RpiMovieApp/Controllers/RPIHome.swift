@@ -241,6 +241,7 @@ class RPIHome: UIViewController, UITableViewDataSource, UITableViewDelegate {
         if isConnected{
             svCategory.selectedSegmentIndex = UISegmentedControl.noSegment
         }
+        txtSearch.resignFirstResponder()
         self.isSearching = true
         fetchData(text: txtSearch.text!)
     }
