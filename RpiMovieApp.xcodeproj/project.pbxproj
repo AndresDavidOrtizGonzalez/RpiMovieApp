@@ -15,10 +15,12 @@
 		3C250EC72242DDDE00C982F6 /* RPIDateRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C250EC62242DDDE00C982F6 /* RPIDateRange.swift */; };
 		3C250EC92242E16500C982F6 /* RPIMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C250EC82242E16500C982F6 /* RPIMedia.swift */; };
 		3C250ECB2242E18300C982F6 /* RPIVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C250ECA2242E18300C982F6 /* RPIVideo.swift */; };
+		3C2AFEF72246888A00130B4D /* wsresponseserach.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C2AFEF52246888A00130B4D /* wsresponseserach.json */; };
+		3C2AFEF82246888A00130B4D /* wsresponsetoprated.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C2AFEF62246888A00130B4D /* wsresponsetoprated.json */; };
 		3C6C3AA0224512A300671684 /* RPIMovieStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6C3A9F224512A300671684 /* RPIMovieStorage.swift */; };
 		3C6C3AA2224539A000671684 /* RPIReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6C3AA1224539A000671684 /* RPIReachability.swift */; };
-		3C6C3AA722455D0600671684 /* TestRPIMovisStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6C3AA622455D0600671684 /* TestRPIMovisStorage.swift */; };
-		3C6C3AAC22457CAA00671684 /* wsresponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C6C3AAB22457CAA00671684 /* wsresponse.json */; };
+		3C6C3AA722455D0600671684 /* TestRPIMovieStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6C3AA622455D0600671684 /* TestRPIMovieStorage.swift */; };
+		3C6C3AAC22457CAA00671684 /* wsresponsepopular.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C6C3AAB22457CAA00671684 /* wsresponsepopular.json */; };
 		3CC3AC1A223F2EDF0018E7E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC3AC19223F2EDF0018E7E3 /* AppDelegate.swift */; };
 		3CC3AC21223F2EEC0018E7E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CC3AC20223F2EEC0018E7E3 /* Assets.xcassets */; };
 		3CC3AC24223F2EEC0018E7E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC3AC22223F2EEC0018E7E3 /* LaunchScreen.storyboard */; };
@@ -27,7 +29,6 @@
 		3CC3AC48223F48EB0018E7E3 /* RPIHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC3AC47223F48EB0018E7E3 /* RPIHome.swift */; };
 		3CC3AC4B223F4A8F0018E7E3 /* RpiCustomMovieTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC3AC4A223F4A8F0018E7E3 /* RpiCustomMovieTableCell.swift */; };
 		3CC3AC4D223F55D90018E7E3 /* RPISearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC3AC4C223F55D90018E7E3 /* RPISearch.swift */; };
-		3CDA950022412052000E4219 /* functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDA94FF22412052000E4219 /* functions.swift */; };
 		5313EB618F96A6C920465EAA /* Pods_RpiMovieAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDCC9E5C4806BC0B37CE62F /* Pods_RpiMovieAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,11 +65,13 @@
 		3C250EC62242DDDE00C982F6 /* RPIDateRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPIDateRange.swift; sourceTree = "<group>"; };
 		3C250EC82242E16500C982F6 /* RPIMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPIMedia.swift; sourceTree = "<group>"; };
 		3C250ECA2242E18300C982F6 /* RPIVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPIVideo.swift; sourceTree = "<group>"; };
+		3C2AFEF52246888A00130B4D /* wsresponseserach.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wsresponseserach.json; sourceTree = "<group>"; };
+		3C2AFEF62246888A00130B4D /* wsresponsetoprated.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wsresponsetoprated.json; sourceTree = "<group>"; };
 		3C6C3A9F224512A300671684 /* RPIMovieStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPIMovieStorage.swift; sourceTree = "<group>"; };
 		3C6C3AA1224539A000671684 /* RPIReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPIReachability.swift; sourceTree = "<group>"; };
 		3C6C3AA322455B5500671684 /* RpiMovieAppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RpiMovieAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		3C6C3AA622455D0600671684 /* TestRPIMovisStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRPIMovisStorage.swift; sourceTree = "<group>"; };
-		3C6C3AAB22457CAA00671684 /* wsresponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wsresponse.json; sourceTree = "<group>"; };
+		3C6C3AA622455D0600671684 /* TestRPIMovieStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRPIMovieStorage.swift; sourceTree = "<group>"; };
+		3C6C3AAB22457CAA00671684 /* wsresponsepopular.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wsresponsepopular.json; sourceTree = "<group>"; };
 		3CC3AC16223F2EDF0018E7E3 /* RpiMovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RpiMovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CC3AC19223F2EDF0018E7E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CC3AC20223F2EEC0018E7E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,7 +84,6 @@
 		3CC3AC47223F48EB0018E7E3 /* RPIHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPIHome.swift; sourceTree = "<group>"; };
 		3CC3AC4A223F4A8F0018E7E3 /* RpiCustomMovieTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RpiCustomMovieTableCell.swift; sourceTree = "<group>"; };
 		3CC3AC4C223F55D90018E7E3 /* RPISearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPISearch.swift; sourceTree = "<group>"; };
-		3CDA94FF22412052000E4219 /* functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = functions.swift; sourceTree = "<group>"; };
 		6486FEF6E476E6F9071EB30F /* Pods_RpiMovieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RpiMovieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82CDB198C0410D68A57217D4 /* Pods-RpiMovieAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RpiMovieAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RpiMovieAppTests/Pods-RpiMovieAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9CDCC9E5C4806BC0B37CE62F /* Pods_RpiMovieAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RpiMovieAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +130,16 @@
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
+		3C2AFEF4224686A600130B4D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3C2AFEF52246888A00130B4D /* wsresponseserach.json */,
+				3C2AFEF62246888A00130B4D /* wsresponsetoprated.json */,
+				3C6C3AAB22457CAA00671684 /* wsresponsepopular.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		3CC3AC0D223F2EDF0018E7E3 = {
 			isa = PBXGroup;
 			children = (
@@ -154,7 +166,6 @@
 			children = (
 				3C250EB92242C9E600C982F6 /* Frameworks */,
 				3CC3AC39223F361F0018E7E3 /* Singletones */,
-				3CDA950122412059000E4219 /* Global */,
 				3CC3AC3B223F36420018E7E3 /* Models */,
 				3CC3AC49223F4A770018E7E3 /* Views */,
 				3CC3AC3A223F36280018E7E3 /* Controllers */,
@@ -169,8 +180,8 @@
 		3CC3AC2D223F2EEC0018E7E3 /* RpiMovieAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				3C6C3AAB22457CAA00671684 /* wsresponse.json */,
-				3C6C3AA622455D0600671684 /* TestRPIMovisStorage.swift */,
+				3C2AFEF4224686A600130B4D /* Data */,
+				3C6C3AA622455D0600671684 /* TestRPIMovieStorage.swift */,
 				3CC3AC30223F2EEC0018E7E3 /* Info.plist */,
 				3C6C3AA322455B5500671684 /* RpiMovieAppTests-Bridging-Header.h */,
 			);
@@ -214,14 +225,6 @@
 				3CC3AC4A223F4A8F0018E7E3 /* RpiCustomMovieTableCell.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		3CDA950122412059000E4219 /* Global */ = {
-			isa = PBXGroup;
-			children = (
-				3CDA94FF22412052000E4219 /* functions.swift */,
-			);
-			path = Global;
 			sourceTree = "<group>";
 		};
 		EF77CFCC19BF55D134A3EDF6 /* Frameworks */ = {
@@ -330,7 +333,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C6C3AAC22457CAA00671684 /* wsresponse.json in Resources */,
+				3C2AFEF82246888A00130B4D /* wsresponsetoprated.json in Resources */,
+				3C2AFEF72246888A00130B4D /* wsresponseserach.json in Resources */,
+				3C6C3AAC22457CAA00671684 /* wsresponsepopular.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,7 +431,6 @@
 				3CC3AC4D223F55D90018E7E3 /* RPISearch.swift in Sources */,
 				3C6C3AA0224512A300671684 /* RPIMovieStorage.swift in Sources */,
 				3C250ECB2242E18300C982F6 /* RPIVideo.swift in Sources */,
-				3CDA950022412052000E4219 /* functions.swift in Sources */,
 				3CC3AC42223F37160018E7E3 /* RPIMovie.swift in Sources */,
 				3CC3AC46223F3DF00018E7E3 /* RPIMovieLoader.swift in Sources */,
 				3C250EB62242B6F300C982F6 /* RPIMovieDetailedViewController.swift in Sources */,
@@ -440,7 +444,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C6C3AA722455D0600671684 /* TestRPIMovisStorage.swift in Sources */,
+				3C6C3AA722455D0600671684 /* TestRPIMovieStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
