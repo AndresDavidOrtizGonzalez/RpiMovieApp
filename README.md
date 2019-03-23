@@ -66,7 +66,7 @@ Qué características tiene, según su opinión, un “buen” código o código
     
 Video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7UNEoH5SwXI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![TheMovieDatabaseApiApp](https://img.youtube.com/vi/7UNEoH5SwXI/0.jpg)](https://youtu.be/7UNEoH5SwXI "TheMovieDatabaseApiApp")
 
 Screen Shots
 
