@@ -102,7 +102,6 @@ class RPIMovieDetailedViewController: UIViewController, UITableViewDataSource, U
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //let cell = tableView.dequeueReusableCell(withIdentifier: "movieDetailedCell", for: indexPath)
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cellId")
         switch indexPath.row {
         case 0:

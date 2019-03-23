@@ -48,8 +48,6 @@ class RPIHome: UIViewController, UITableViewDataSource, UITableViewDelegate {
        let text = UITextField()
        text.autocorrectionType = UITextAutocorrectionType.no
        text.borderStyle = UITextField.BorderStyle.roundedRect
-       //text.layer.masksToBounds = true
-       //text.layer.cornerRadius = 6
        text.backgroundColor = .white
        text.placeholder = "Write something and tab Search..."
        return text
@@ -180,18 +178,8 @@ class RPIHome: UIViewController, UITableViewDataSource, UITableViewDelegate {
                     }
                     else{
                         if (self.movies.count == 20){
-                            /*if (self.movies.count == result.count){
-                                var indexPathToReload = [IndexPath]()
-                                for cell in self.tableView.visibleCells{
-                                    indexPathToReload.append(self.tableView.indexPath(for: cell)!)
-                                }
-                                self.movies = result
-                                self.tableView.reloadRows(at: indexPathToReload, with: self.animationStyle!)
-                            }
-                            else{*/
-                                self.movies = result
-                                self.tableView.reloadSections(IndexSet(integer: 0), with: self.animationStyle!)
-                            //}
+                            self.movies = result
+                            self.tableView.reloadSections(IndexSet(integer: 0), with: self.animationStyle!)
                         }
                         else{
                             self.movies = result
@@ -258,16 +246,11 @@ class RPIHome: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
 
-
-    // MARK: - Table view data source
-
     func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return  self.movies.count
     }
 

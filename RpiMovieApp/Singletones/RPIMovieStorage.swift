@@ -103,15 +103,6 @@ class RPIMovieStorage {
         if !fileManager.fileExists(atPath: fileURL.absoluteString){
             let data = try! encoder.encode(movie)
             try! data.write(to: fileURL)
-            /*if (category == "popular"){
-                self.popularMovies.append(movie)
-            }
-            else if (category == "topRated"){
-                self.topRatedMovies.append(movie)
-            }
-            else if (category == "upcoming"){
-                self.upcomingMovies.append(movie)
-            }*/
         }
     }
     
