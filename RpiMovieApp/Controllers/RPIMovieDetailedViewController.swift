@@ -89,7 +89,7 @@ class RPIMovieDetailedViewController: UIViewController, UITableViewDataSource, U
         case 0:
             height = CGFloat(UIScreen.main.bounds.width / 1.33)
         case 1:
-            height = 60.0
+            height = 80.0
         case 2:
             height = CGFloat(UIScreen.main.bounds.height/3)
         case 3:
@@ -129,19 +129,50 @@ class RPIMovieDetailedViewController: UIViewController, UITableViewDataSource, U
                 cell.addSubview(lblTitle)
             }
 
-            
             cell.backgroundColor = UIColor.black
             
         case 1:
             let lblTitle = UILabel()
             lblTitle.frame = CGRect(x: 10, y: 0, width: UIScreen.main.bounds.width - 10, height: cell.frame.height)
             lblTitle.text = movie!.title
-            lblTitle.font = UIFont.systemFont(ofSize: 28, weight: .thin)
+            lblTitle.font = UIFont.systemFont(ofSize: 22, weight: .thin)
             lblTitle.numberOfLines = 0
             lblTitle.backgroundColor = UIColor.black
             lblTitle.textColor = UIColor.white
             cell.backgroundColor = UIColor.black
             cell.addSubview(lblTitle)
+            
+            let lblReleaseDate = UILabel()
+            lblReleaseDate.frame = CGRect(x: 10, y: 40, width: (UIScreen.main.bounds.width / 2) - 10, height: 20)
+            lblReleaseDate.text = "Release \(movie?.releaseDate ?? "No register")"
+            lblReleaseDate.lineBreakMode = .byWordWrapping
+            lblReleaseDate.font = UIFont.systemFont(ofSize: 14, weight: .thin)
+            lblReleaseDate.numberOfLines = 0
+            lblReleaseDate.backgroundColor = UIColor.black
+            lblReleaseDate.textColor = UIColor.groupTableViewBackground
+            lblReleaseDate.textAlignment = .left
+
+            cell.addSubview(lblReleaseDate)
+            
+            let lblRating = UILabel()
+            lblRating.frame = CGRect(x: (UIScreen.main.bounds.width / 2), y: 40, width: (UIScreen.main.bounds.width / 2) - 30, height: 20)
+            lblRating.text = "Rate (\(movie?.voteAverage ?? 0.0))"
+            lblRating.lineBreakMode = .byWordWrapping
+            lblRating.font = UIFont.systemFont(ofSize: 14, weight: .thin)
+            lblRating.numberOfLines = 0
+            lblRating.backgroundColor = UIColor.black
+            lblRating.textColor = UIColor(red: 238.0, green: 145.0, blue: 30.0, alpha: 1.0)
+            lblRating.textAlignment = .right
+            
+            cell.addSubview(lblRating)
+            
+            let imgRating = UIImageView()
+            imgRating.frame = CGRect(x: (UIScreen.main.bounds.width - 28), y: 40, width: 20, height: 20)
+            imgRating.image = UIImage(named: "star")
+            cell.addSubview(imgRating)
+            
+            
+            cell.backgroundColor = UIColor.black
         case 2:
             let imgCover : UIImageView
             imgCover = UIImageView()
@@ -159,10 +190,10 @@ class RPIMovieDetailedViewController: UIViewController, UITableViewDataSource, U
             
             let lblPlot = UILabel()
             lblPlot.frame = CGRect(x: (UIScreen.main.bounds.width/3
-                ) + 40, y: 0, width: (UIScreen.main.bounds.width * 0.66666) - 60, height: UIScreen.main.bounds.height/3)
+                ) + 40, y: 0, width: (UIScreen.main.bounds.width * 0.66666) - 50, height: UIScreen.main.bounds.height/3)
             lblPlot.text = movie!.overview
             lblPlot.textAlignment = .justified
-            lblPlot.font = UIFont.systemFont(ofSize: 16, weight: .thin)
+            lblPlot.font = UIFont.systemFont(ofSize: 15, weight: .thin)
             lblPlot.numberOfLines = 0
             lblPlot.backgroundColor = UIColor.clear
             lblPlot.textColor = UIColor.white
