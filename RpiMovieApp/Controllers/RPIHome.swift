@@ -254,7 +254,7 @@ class RPIHome: UIViewController, UITableViewDataSource, UITableViewDelegate {
         else
         {
             let noDataLabel: UILabel  = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
-            noDataLabel.text          = isLoading! ? "" : "No data available"
+            noDataLabel.text          = isLoading! ? "" : "No Matching Results"
             noDataLabel.textColor     = UIColor.black
             noDataLabel.textAlignment = .center
             tableView.backgroundView  = noDataLabel
@@ -274,7 +274,7 @@ class RPIHome: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
         let movie = movies[indexPath.row]
         
-        let baseURL = "https://image.tmdb.org/t/p/w500"
+        
         if  ((movie.posterPath) != nil){
             let url = URL(string: baseURL + movie.posterPath!)
             let placeholderImage = UIImage(named: "movieplaceholder")!

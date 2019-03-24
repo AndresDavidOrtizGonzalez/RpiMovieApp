@@ -17,15 +17,7 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "RPIMovieDetailedViewController.tableView(_:cellForRowAt:):RPIMovieDetailedViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.videoURL">
-            </PersistentString>
-            <PersistentString
-               value = "cell.frame">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "RPIMovieStorage.retrieveArray(category:):RPIMovieStorage.swift">
       </ContextState>
       <ContextState
          contextName = "closure #1 in RPIHome.fetchData(text:):RPIHome.swift">
@@ -37,27 +29,38 @@
                value = "self.animationStyle">
             </PersistentString>
             <PersistentString
-               value = "page">
-            </PersistentString>
-            <PersistentString
                value = "self.movies.count">
             </PersistentString>
             <PersistentString
                value = "self.isLoading!">
             </PersistentString>
+            <PersistentString
+               value = "page">
+            </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "RPIMovieStorage.retrieveArray(category:):RPIMovieStorage.swift">
+         contextName = "RPIMovieDetailedViewController.tableView(_:cellForRowAt:):RPIMovieDetailedViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.videoURL">
+            </PersistentString>
+            <PersistentString
+               value = "cell.frame">
+            </PersistentString>
+            <PersistentString
+               value = "lblTitle.frame">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "closure #1 in closure #1 in RPIMovieLoader.fetchMovies(kind:page:text:completion:):RPIMovieLoader.swift">
          <PersistentStrings>
             <PersistentString
-               value = "category">
+               value = "movieCategoryPath">
             </PersistentString>
             <PersistentString
-               value = "self.movieSearchText">
+               value = "page">
             </PersistentString>
             <PersistentString
                value = "kind">
@@ -66,10 +69,10 @@
                value = "RPIMovieStorage.shared.popularMovies">
             </PersistentString>
             <PersistentString
-               value = "movieCategoryPath">
+               value = "category">
             </PersistentString>
             <PersistentString
-               value = "page">
+               value = "self.movieSearchText">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -156,13 +159,13 @@
          contextName = "RPIMovieStorage.directoryExistsAtPath(_:):RPIMovieStorage.swift">
          <PersistentStrings>
             <PersistentString
+               value = "isDirectory.boolValue">
+            </PersistentString>
+            <PersistentString
                value = "fileManager.fileExists(atPath: &quot;/Users/andresortiz/Library/Developer/CoreSimulator/Devices/1A33ACED-6882-40E9-B398-93334DCFA001/data/Containers/Data/Application/F1DD0FAC-7D93-43DC-88B9-56C88D7E62A3/Documents/popular/&quot;, isDirectory: &amp;isDirectory)">
             </PersistentString>
             <PersistentString
                value = "exists.boolValue">
-            </PersistentString>
-            <PersistentString
-               value = "isDirectory.boolValue">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

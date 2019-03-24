@@ -82,7 +82,7 @@ class RPIMovieDetailedViewController: UIViewController, UITableViewDataSource, U
         var height: CGFloat
         switch indexPath.row {
         case 0:
-            height = CGFloat(UIScreen.main.bounds.width / 1.33)
+            height = videoZoneHeigth
         case 1:
             height = 80.0
         case 2:
@@ -104,12 +104,12 @@ class RPIMovieDetailedViewController: UIViewController, UITableViewDataSource, U
             if isConnected{
                 if (self.videoURL != "")
                 {
-                    let videoPlayer = YouTubePlayerView(frame: CGRect(x:0, y:0, width: UIScreen.main.bounds.width, height: CGFloat(UIScreen.main.bounds.width / 1.33)))
+                    let videoPlayer = YouTubePlayerView(frame: CGRect(x:0, y:0, width: UIScreen.main.bounds.width, height: videoZoneHeigth))
                     videoPlayer.loadVideoID(self.videoURL!)
                     videoPlayer.backgroundColor = UIColor.black
                     videoPlayer.delegate = self
                     cell.addSubview(videoPlayer)
-                    self.aiLoader?.frame = CGRect(x:  CGFloat(UIScreen.main.bounds.width/2)-10, y: CGFloat((UIScreen.main.bounds.width / 1.33)/2)-10, width: 20, height: 20)
+                    self.aiLoader?.frame = CGRect(x:  CGFloat(UIScreen.main.bounds.width/2)-10, y: CGFloat(videoZoneHeigth/2)-10, width: 20, height: 20)
                     cell.addSubview(self.aiLoader!)
                     cell.bringSubviewToFront(self.aiLoader!)
                 }
@@ -126,7 +126,7 @@ class RPIMovieDetailedViewController: UIViewController, UITableViewDataSource, U
             }
             else{
                 let lblTitle = UILabel()
-                lblTitle.frame = CGRect(x: 0, y: CGFloat(((UIScreen.main.bounds.width / 1.33)/2)-30), width: UIScreen.main.bounds.width, height: 20)
+                lblTitle.frame = CGRect(x: 0, y: CGFloat((videoZoneHeigth/2)-30), width: UIScreen.main.bounds.width, height: 20)
                 lblTitle.text = "No video available without connection"
                 lblTitle.lineBreakMode = .byWordWrapping
                 lblTitle.font = UIFont.systemFont(ofSize: 20, weight: .thin)
@@ -152,7 +152,7 @@ class RPIMovieDetailedViewController: UIViewController, UITableViewDataSource, U
             cell.addSubview(lblTitle)
             
             let lblReleaseDate = UILabel()
-            lblReleaseDate.frame = CGRect(x: 10, y: 40, width: (UIScreen.main.bounds.width / 2) - 10, height: 20)
+            lblReleaseDate.frame = CGRect(x: 10, y: 40, width: halfScreenWidth - 10, height: 20)
             lblReleaseDate.text = "Release \(movie?.releaseDate ?? "No register")"
             lblReleaseDate.lineBreakMode = .byWordWrapping
             lblReleaseDate.font = UIFont.systemFont(ofSize: 14, weight: .thin)
@@ -164,7 +164,7 @@ class RPIMovieDetailedViewController: UIViewController, UITableViewDataSource, U
             cell.addSubview(lblReleaseDate)
             
             let lblRating = UILabel()
-            lblRating.frame = CGRect(x: (UIScreen.main.bounds.width / 2), y: 40, width: (UIScreen.main.bounds.width / 2) - 30, height: 20)
+            lblRating.frame = CGRect(x: halfScreenWidth, y: 40, width: halfScreenWidth - 30, height: 20)
             lblRating.text = "Rate (\(movie?.voteAverage ?? 0.0))"
             lblRating.lineBreakMode = .byWordWrapping
             lblRating.font = UIFont.systemFont(ofSize: 14, weight: .thin)
@@ -188,7 +188,6 @@ class RPIMovieDetailedViewController: UIViewController, UITableViewDataSource, U
             imgCover.frame = CGRect(x:20, y: 10, width: (UIScreen.main.bounds.width/3), height: (UIScreen.main.bounds.height/3)-20)
             imgCover.contentMode = .scaleAspectFit
             if ((movie!.posterPath) != nil){
-                let baseURL = "https://image.tmdb.org/t/p/w500"
                 let placeholderImage = UIImage(named: "movieplaceholder")!
                 imgCover.sd_setImage(with: URL(string: baseURL + movie!.posterPath!), placeholderImage:  placeholderImage)
             }
