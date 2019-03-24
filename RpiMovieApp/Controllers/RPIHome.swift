@@ -67,7 +67,7 @@ class RPIHome: UIViewController, UITableViewDataSource, UITableViewDelegate {
         super.viewDidLoad()
         
         self.isSearching = false
-        self.isLoading = false
+        self.isLoading = true
         self.page = 1
         self.category = 1
         self.animationStyle = UITableView.RowAnimation.none
@@ -244,7 +244,23 @@ class RPIHome: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        var numOfSections: Int = 0
+        if self.movies.count > 0
+        {
+            tableView.separatorStyle = .singleLine
+            numOfSections            = 1
+            tableView.backgroundView = nil
+        }
+        else
+        {
+            let noDataLabel: UILabel  = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
+            noDataLabel.text          = isLoading! ? "" : "No data available"
+            noDataLabel.textColor     = UIColor.black
+            noDataLabel.textAlignment = .center
+            tableView.backgroundView  = noDataLabel
+            tableView.separatorStyle  = .none
+        }
+        return numOfSections
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
