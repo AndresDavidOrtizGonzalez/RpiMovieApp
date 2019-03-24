@@ -11,7 +11,7 @@ import SDWebImage
 import YouTubePlayer
 
 
-class RPIMovieDetailedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class RPIMovieDetailedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, YouTubePlayerDelegate {
 
     var movie: Movie?
     var videoURL: String?
@@ -20,6 +20,11 @@ class RPIMovieDetailedViewController: UIViewController, UITableViewDataSource, U
     
     @objc func goBackAction(_ sender: Any){
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    func playerReady(_ videoPlayer: YouTubePlayer.YouTubePlayerView) {
+        self.aiLoader?.stopAnimating()
+        self.aiLoader?.isHidden = true
     }
     
     
@@ -32,11 +37,8 @@ class RPIMovieDetailedViewController: UIViewController, UITableViewDataSource, U
         self.tvMovie.dataSource = self
         self.videoURL = ""
         self.aiLoader = UIActivityIndicatorView()
-        self.aiLoader?.frame = CGRect(x: (UIScreen.main.bounds.width/2), y: (UIScreen.main.bounds.width/2), width: 20, height: 20)
         self.aiLoader?.startAnimating()
-        self.aiLoader?.tintColor = UIColor.black
-        self.view.addSubview(self.aiLoader!)
-        self.view.bringSubviewToFront(self.aiLoader!)
+        self.aiLoader?.tintColor = UIColor.white
         self.tvMovie.separatorStyle = .none
         
         setupViews()
@@ -71,14 +73,7 @@ class RPIMovieDetailedViewController: UIViewController, UITableViewDataSource, U
         RPIMovieLoader.shared.fetchMovieVideo(movieId: (self.movie?.id)!){
             (result: String, success) in
             self.videoURL = result
-            self.aiLoader?.isHidden = true
-            
-            var indexPathToLoad = [IndexPath]()
-            for index in 0...3{
-                indexPathToLoad.append(IndexPath(row: index, section: 0))
-            }
-            
-            self.tvMovie.reloadRows(at: indexPathToLoad, with: UITableView.RowAnimation.bottom)
+            self.tvMovie.reloadData()
         }
     }
     
@@ -107,13 +102,27 @@ class RPIMovieDetailedViewController: UIViewController, UITableViewDataSource, U
         case 0:
             let isConnected = RPIReachability.shared.isConnected()
             if isConnected{
-                let videoPlayer = YouTubePlayerView(frame: CGRect(x:0, y:0, width: UIScreen.main.bounds.width, height: CGFloat(UIScreen.main.bounds.width / 1.33)))
                 if (self.videoURL != "")
                 {
+                    let videoPlayer = YouTubePlayerView(frame: CGRect(x:0, y:0, width: UIScreen.main.bounds.width, height: CGFloat(UIScreen.main.bounds.width / 1.33)))
                     videoPlayer.loadVideoID(self.videoURL!)
+                    videoPlayer.backgroundColor = UIColor.black
+                    videoPlayer.delegate = self
+                    cell.addSubview(videoPlayer)
+                    self.aiLoader?.frame = CGRect(x:  CGFloat(UIScreen.main.bounds.width/2)-10, y: CGFloat((UIScreen.main.bounds.width / 1.33)/2)-10, width: 20, height: 20)
+                    cell.addSubview(self.aiLoader!)
+                    cell.bringSubviewToFront(self.aiLoader!)
                 }
-                videoPlayer.backgroundColor = UIColor.black
-                cell.addSubview(videoPlayer)
+                else{
+                    let lblTitle = UILabel()
+                    lblTitle.frame = CGRect(x: 0, y: CGFloat(UIScreen.main.bounds.width/2)-30, width: UIScreen.main.bounds.width, height: 20)
+                    lblTitle.backgroundColor = UIColor.black
+                    lblTitle.textColor = UIColor.white
+                    lblTitle.textAlignment = .center
+                    lblTitle.text = "Loading"
+                    cell.addSubview(lblTitle)
+                }
+
             }
             else{
                 let lblTitle = UILabel()
