@@ -131,7 +131,7 @@ class RPIHome: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.topAnchor.constraint(equalTo: margins.topAnchor, constant: 120).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: 0).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0).isActive = true
         tableView.leftAnchor.constraint(equalTo: margins.leftAnchor, constant: 0).isActive = true
         tableView.rightAnchor.constraint(equalTo: margins.rightAnchor, constant: 0).isActive = true
  
@@ -139,12 +139,8 @@ class RPIHome: UIViewController, UITableViewDataSource, UITableViewDelegate {
         tableView.delegate = self
         
         tableView.register(RpiCustomMovieTableCell.self, forCellReuseIdentifier: cellId)
-        
-        
+ 
         self.view.addSubview(loader)
-        
-        
-        
         
         loader.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         loader.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true

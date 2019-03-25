@@ -58,7 +58,7 @@ class RPIMovieDetailedViewController: UIViewController, UITableViewDataSource, U
         
         tvMovie.translatesAutoresizingMaskIntoConstraints = false
         tvMovie.topAnchor.constraint(equalTo: margins.topAnchor, constant: 0).isActive = true
-        tvMovie.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: 0).isActive = true
+        tvMovie.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0).isActive = true
         tvMovie.leftAnchor.constraint(equalTo: margins.leftAnchor, constant: 0).isActive = true
         tvMovie.rightAnchor.constraint(equalTo: margins.rightAnchor, constant: 0).isActive = true
         
