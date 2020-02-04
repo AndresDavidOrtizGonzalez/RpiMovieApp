@@ -3,15 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		180036AF28FD40E488A5BC46 /* Pods_RpiMovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6486FEF6E476E6F9071EB30F /* Pods_RpiMovieApp.framework */; };
 		3C250EB62242B6F300C982F6 /* RPIMovieDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C250EB52242B6F300C982F6 /* RPIMovieDetailedViewController.swift */; };
 		3C250EB82242B9EF00C982F6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3C250EB72242B9EF00C982F6 /* Podfile */; };
-		3C250EC22242D68900C982F6 /* YouTubePlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C250EC12242D68900C982F6 /* YouTubePlayer.framework */; };
-		3C250EC42242D68E00C982F6 /* YouTubePlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C250EC12242D68900C982F6 /* YouTubePlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3C250EC72242DDDE00C982F6 /* RPIDateRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C250EC62242DDDE00C982F6 /* RPIDateRange.swift */; };
 		3C250EC92242E16500C982F6 /* RPIMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C250EC82242E16500C982F6 /* RPIMedia.swift */; };
 		3C250ECB2242E18300C982F6 /* RPIVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C250ECA2242E18300C982F6 /* RPIVideo.swift */; };
@@ -50,7 +48,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3C250EC42242D68E00C982F6 /* YouTubePlayer.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,7 +59,6 @@
 		2E4AB426B6708FFB1FEAD6B7 /* Pods-RpiMovieApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RpiMovieApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RpiMovieApp/Pods-RpiMovieApp.release.xcconfig"; sourceTree = "<group>"; };
 		3C250EB52242B6F300C982F6 /* RPIMovieDetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPIMovieDetailedViewController.swift; sourceTree = "<group>"; };
 		3C250EB72242B9EF00C982F6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		3C250EC12242D68900C982F6 /* YouTubePlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YouTubePlayer.framework; sourceTree = "<group>"; };
 		3C250EC62242DDDE00C982F6 /* RPIDateRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPIDateRange.swift; sourceTree = "<group>"; };
 		3C250EC82242E16500C982F6 /* RPIMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPIMedia.swift; sourceTree = "<group>"; };
 		3C250ECA2242E18300C982F6 /* RPIVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPIVideo.swift; sourceTree = "<group>"; };
@@ -98,7 +94,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				180036AF28FD40E488A5BC46 /* Pods_RpiMovieApp.framework in Frameworks */,
-				3C250EC22242D68900C982F6 /* YouTubePlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,14 +117,6 @@
 				FCD1BC393B23D4574FDDE665 /* Pods-RpiMovieAppTests.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		3C250EB92242C9E600C982F6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3C250EC12242D68900C982F6 /* YouTubePlayer.framework */,
-			);
-			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		3C2AFEF4224686A600130B4D /* Data */ = {
@@ -175,7 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				3C953CA3224828190059D605 /* Global */,
-				3C250EB92242C9E600C982F6 /* Frameworks */,
 				3CC3AC39223F361F0018E7E3 /* Singletones */,
 				3CC3AC3B223F36420018E7E3 /* Models */,
 				3CC3AC49223F4A770018E7E3 /* Views */,
@@ -394,17 +380,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RpiMovieAppTests/Pods-RpiMovieAppTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RpiMovieAppTests/Pods-RpiMovieAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RpiMovieAppTests/Pods-RpiMovieAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RpiMovieAppTests/Pods-RpiMovieAppTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RpiMovieAppTests/Pods-RpiMovieAppTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EB0B1018B1ED58B8DDB3FE2A /* [CP] Embed Pods Frameworks */ = {
@@ -412,21 +397,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RpiMovieApp/Pods-RpiMovieApp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RpiMovieApp/Pods-RpiMovieApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RpiMovieApp/Pods-RpiMovieApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RpiMovieApp/Pods-RpiMovieApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RpiMovieApp/Pods-RpiMovieApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

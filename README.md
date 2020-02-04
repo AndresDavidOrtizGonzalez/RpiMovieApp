@@ -40,29 +40,6 @@ RPIMovieStorage para la persistencia
 
 RPIReachability para determinar la conexion a internet.
 
-
-En qué consiste el principio de responsabilidad única? Cuál es su propósito?
-    Basicamente es que cada clase debe tener responsabilidad es solo una parte de la funcionalidad proporcionada por la app. Su proposito es evitar propagación de cambios
-    
-Qué características tiene, según su opinión, un “buen” código o código limpio
-
-    Se quiere
-
-    Codigo legible
-    Codigo portable
-    Codigo semantico
-    Codigo Identado
-    Codigo Modular
-    Codigo Testeable
-    Comentarios explicando secciones y funcionalidad
-    
-    Se evita
-    
-    Evitar codigo espagueti
-    Evitar codigo innecesario
-    Evitar llamadas recursivas infinitas
-    
- 
     
 Video
 

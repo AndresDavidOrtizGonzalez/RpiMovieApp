@@ -1,42 +1,46 @@
 PODS:
-  - Alamofire (4.8.1)
-  - OHHTTPStubs/Core (6.1.0)
-  - OHHTTPStubs/Default (6.1.0):
+  - Alamofire (4.9.0)
+  - OHHTTPStubs/Core (9.0.0)
+  - OHHTTPStubs/Default (9.0.0):
     - OHHTTPStubs/Core
     - OHHTTPStubs/JSON
     - OHHTTPStubs/NSURLSession
     - OHHTTPStubs/OHPathHelpers
-  - OHHTTPStubs/JSON (6.1.0):
+  - OHHTTPStubs/JSON (9.0.0):
     - OHHTTPStubs/Core
-  - OHHTTPStubs/NSURLSession (6.1.0):
+  - OHHTTPStubs/NSURLSession (9.0.0):
     - OHHTTPStubs/Core
-  - OHHTTPStubs/OHPathHelpers (6.1.0)
-  - OHHTTPStubs/Swift (6.1.0):
+  - OHHTTPStubs/OHPathHelpers (9.0.0)
+  - OHHTTPStubs/Swift (9.0.0):
     - OHHTTPStubs/Default
-  - ReachabilitySwift (4.3.0)
-  - SDWebImage (4.4.6):
-    - SDWebImage/Core (= 4.4.6)
-  - SDWebImage/Core (4.4.6)
+  - ReachabilitySwift (5.0.0)
+  - SDWebImage (4.4.7):
+    - SDWebImage/Core (= 4.4.7)
+  - SDWebImage/Core (4.4.7)
+  - YouTubePlayer (0.4.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - OHHTTPStubs/Swift
   - ReachabilitySwift
   - SDWebImage (~> 4.0)
+  - YouTubePlayer
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Alamofire
     - OHHTTPStubs
     - ReachabilitySwift
     - SDWebImage
+    - YouTubePlayer
 
 SPEC CHECKSUMS:
-  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
-  OHHTTPStubs: 1e21c7d2c084b8153fc53d48400d8919d2d432d0
-  ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
-  SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  OHHTTPStubs: cb29d2a9d09a828ecb93349a2b0c64f99e0db89f
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  SDWebImage: c10d14a8883ebd89664f02a422006f66a85c0c5d
+  YouTubePlayer: 028451f6772f372d4759866db99824c676ac1473
 
-PODFILE CHECKSUM: 5d03075e35091ff433a13e4cee709ea856bad951
+PODFILE CHECKSUM: 5267e0354ff7c27ea3b8abf627dd00f9d5c17ed3
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.4
