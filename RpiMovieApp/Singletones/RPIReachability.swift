@@ -13,7 +13,7 @@ class RPIReachability {
 
     static let shared = RPIReachability()
 
-    let reachability = Reachability()
+    let reachability = try? Reachability()
     var reachable : Bool?
 
     init() {
@@ -46,7 +46,7 @@ class RPIReachability {
     {
         var isNetAvailable = false;
         
-        let reach = Reachability(hostname: "www.google.com")
+        let reach = try? Reachability(hostname: "www.google.com")
         let netStatus = reach!.connection
         if (netStatus != .none)
         {

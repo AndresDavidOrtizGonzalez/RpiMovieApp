@@ -7,7 +7,7 @@ target 'RpiMovieApp' do
 
   # Pods for RpiMovieApp
 
-  
+  pod 'YouTubePlayer'
   pod 'ReachabilitySwift'
   pod 'Alamofire', '~> 4.7'
   pod 'SDWebImage', '~> 4.0'
